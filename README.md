@@ -179,9 +179,11 @@ One row per transaction (`sale_id` is unique), 27 fields in six groups.
 
 ### 6. Revenue is flat, growth comes from ticket size, and there is no seasonality
 
-![Monthly revenue by category](revenue-trend.png)
+Year-on-year growth is read from the table. The chart pools each calendar month across all three years (each January point is January 2022 + 2023 + 2024), so it is used only to look for seasonality.
 
-*Figure 6. Monthly revenue by category, 2022-2024 (USD).*
+![Revenue by calendar month, pooled across 2022-2024](revenue-trend.png)
+
+*Figure 6. Revenue by calendar month, summed across 2022-2024 (USD). It shows seasonality, not year-over-year growth.*
 
 | Year | Revenue | Year on year | Transactions | Revenue per transaction |
 | :--- | ---: | ---: | ---: | ---: |
@@ -191,7 +193,7 @@ One row per transaction (`sale_id` is unique), 27 fields in six groups.
 
 - 2024 revenue is 3.1% above 2022, while transactions are 0.8% lower and revenue per transaction is 3.9% higher.
 - There is no month-of-year effect on daily revenue (p = 0.53), and Q4 is only 4.0% above the average of the other quarters.
-- The sharp monthly swings in the Mac line come from a small number of large orders (finding 1), not from seasonality.
+- The sharp month-to-month swings in the Mac line come from a small number of large orders (finding 1), not from seasonality. Mac revenue in August, for example, was $212K in 2022, $93K in 2023 and $277K in 2024.
 
 ### 7. Customer segments do not separate
 
